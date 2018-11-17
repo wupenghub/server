@@ -9,7 +9,8 @@ app.all('*', function (req, res, next) {
     next();
 });
 app.use(router);
-
+app.use('/public/', express.static('./JDinServer/public/'));
+app.use('/node_modules/', express.static('./JDinServer/node_modules/'));
 app.listen(5000, function () {
     console.log('Running...');
 });

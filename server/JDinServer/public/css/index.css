@@ -1,0 +1,295 @@
+body {
+    background: #f5f5f5;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.br {
+    border-right: 1px solid #cccccc;
+}
+
+img.w50 {
+    display: block;
+}
+
+.bb {
+    border-bottom: 1px solid #cccccc;
+}
+
+/*版心*/
+.jd_container {
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.jd_search {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.jd_search .jd_search_box {
+    background: rgba(201, 21, 35, 0.85);
+    height: 40px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+.jd_search .jd_search_box .icon_logo {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    top: 4px;
+    left: 10px;
+    background-position: 0 -103px;
+}
+
+.jd_search .jd_search_box form {
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.jd_search .jd_search_box form .search {
+    margin-top: 5px;
+    height: 30px;
+    border-radius: 15px;
+    width: 100%;
+    position: relative;
+    padding-left: 40px;
+}
+
+.jd_search .jd_search_box form .icon_search_logo {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-position: -60px -109px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.jd_search .jd_search_box .login {
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+
+.jd_banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.jd_banner ul:first-child {
+    width: 1000%;
+    transform: translateX(-10%);
+    -webkit-transform: translateX(-10%);
+}
+
+.jd_banner ul:first-child li {
+    height: 182px;
+    width: 10%;
+    float: left;
+}
+
+.jd_banner ul:first-child li a {
+    display: block;
+    height: 182px;
+    width: 100%;
+}
+
+.jd_banner ul:first-child li a img {
+    display: block;
+    height: 182px;
+    width: 100%;
+}
+
+.jd_banner ul:nth-child(2) {
+    position: absolute;
+    bottom: 6px;
+    left: 127px;
+}
+
+.jd_banner ul:nth-child(2) li {
+    float: left;
+    margin-left: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.jd_banner ul:nth-child(2) li.now {
+    margin-left: 0;
+    background-color: red;
+}
+
+.jd_nav ul {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10PX;
+}
+
+.jd_nav ul li {
+    width: 25%;
+    float: left;
+}
+
+.jd_nav ul li a p {
+    text-align: center;
+}
+
+.jd_nav ul li a img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 3px auto;
+}
+
+.jd_product {
+    padding: 4px;
+}
+
+.jd_product .p_box {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 2px #ccc;
+    position: relative;
+    box-shadow: 0 0 2px #ccc
+}
+
+.jd_product .p_box .nb {
+    height: 34px;
+    border-bottom: 1px solid #cccccc;
+    line-height: 34px;
+    font-weight: normal;
+    float: left;
+}
+
+.jd_product .p_box .title {
+    height: 34px;
+    width: 100%;
+    border-bottom: 1px solid #cccccc;
+    line-height: 34px;
+    font-weight: normal;
+    padding-left: 23px;
+}
+
+.jd_product .p_box:first-child span.nb {
+    border-bottom: none;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #d8505c;
+    float: left;
+}
+
+.jd_product .p_box .icon {
+    width: 16px;
+    height: 20px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 7px;
+    background: url("../images/seckill-icon.png") no-repeat center /16px 20px;
+}
+
+.jd_product .p_box:first-child img {
+    width: 16px;
+    height: 20px;
+    display: block;
+}
+
+.jd_product .p_box .title::before {
+    content: "";
+    width: 3px;
+    height: 12px;
+    background-color: #d8505c;
+    position: absolute;
+    top: 10px;
+    left: 11px;
+}
+
+.jd_product .p_box .time {
+    float: left;
+    margin-left: 10px;
+    margin-top: 9px;
+}
+
+.jd_product .p_box .time span {
+    float: left;
+    background-color: #333;
+    margin-left: 3px;
+    width: 16px;
+    height: 16px;
+    color: white;
+    line-height: 16px;
+    text-align: center;
+}
+
+.jd_product .p_box .time span:nth-child(3n) {
+    width: 3px;
+    background: white;
+    color: black;
+}
+
+.jd_product .p_box .more {
+    margin-right: 10px;
+    margin-top: 8px;
+}
+
+.jd_product .p_box .products a {
+    display: block;
+    float: left;
+    width: 33%;
+    border-right: 1px solid #cccccc;
+}
+
+.jd_product .p_box .products a:last-child {
+    border: none;
+}
+
+.jd_product .p_box .products a img {
+    display: block;
+    width: 64%;
+    height: 77px;
+    margin: 0 auto;
+}
+
+.jd_product .p_box .products a span {
+    display: block;
+    text-align: center;
+}
+
+.jd_product .p_box .products a span.price_now {
+    color: #d8505c;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.jd_product .p_box .products a span.price_old {
+    font-size: 14px;
+    text-decoration: line-through;
+}
