@@ -43,13 +43,10 @@ function lunBoChange() {
     };
     var timer = window.setInterval(intervalFun, 3000);
     jdBanner.addEventListener('transitionend', function () {
+        removeTransition();
         if (index == lunBoEle.length - 1) {
-            jdBanner.style.transition = 'none';
-            jdBanner.style.webkitTransition = 'none';
             index = 1;
         } else if (index == 0) {
-            jdBanner.style.transition = 'none';
-            jdBanner.style.webkitTransition = 'none';
             index = lunBoEle.length - 2;
         }
         jdBanner.style.transform = 'translateX(' + (-index * jdBabberWidth) + 'px)';
