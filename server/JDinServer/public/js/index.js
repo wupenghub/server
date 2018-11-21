@@ -41,7 +41,7 @@ function lunBoChange() {
         index++;
         startTransition(-index * jdBabberWidth);
     };
-    var timer = window.setInterval(intervalFun, 3000);
+    var timer = window.setInterval(intervalFun, 1000);
     jdBanner.addEventListener('transitionend', function () {
         removeTransition();
         if (index == lunBoEle.length - 1) {
@@ -97,14 +97,14 @@ function lunBoChange() {
         //手指离开屏幕先判断手指移动距离的长度是否占图片的50%
         var fingerMoveDistance = Math.abs(distance);
         if (fingerMoveDistance > jdBabberWidth / 4) {
-            // 移动长度大于半个图片的宽度，则往前后者往后移动一个图片的距离
+            // 移动长度大于四分之一个图片的宽度，则往前后者往后移动一个图片的距离
             // 如果移动的距离为正数，则说明是需要往前移动一个图片的距离，如果为负数，则需要往后移动一个图片的距离
             index = distance > 0 ? index - 1 : index + 1;
         }
-        //如果移动长度不超过半个图片，则索引不变
+        //如果移动长度不超过四分之一个图片，则索引不变
         //设置移动动画
         startTransition(-index * jdBabberWidth);
-        //如果移动的距离没有半个图片的距离index值不变，轮播图自动返回到上一幅图
-        timer = window.setInterval(intervalFun, 3000);
+        //开启自动轮播
+        timer = window.setInterval(intervalFun, 1000);
     });
 }
