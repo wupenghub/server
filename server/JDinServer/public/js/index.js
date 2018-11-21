@@ -90,10 +90,8 @@ function lunBoChange() {
         distance = moveX - startX;
         //获取移动偏移后的坐标
         var currentX = -index * jdBabberWidth + distance;
-        removeTransition();
         jdBanner.style.transform = 'translateX(' + currentX + 'px)';
         jdBanner.style.webkitTransform = 'translateX(' + currentX + 'px)';
-        // startTransition(currentX);
     });
     jdBanner.addEventListener('touchend', function (e) {
         //手指离开屏幕先判断手指移动距离的长度是否占图片的50%
