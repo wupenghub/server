@@ -43,7 +43,7 @@ img.w50 {
 }
 
 .jd_search .jd_search_box {
-    background: rgba(201, 21, 35, 0.85);
+    background: rgba(201, 21, 35, 0);
     height: 40px;
     margin: 0 auto;
     position: relative;
@@ -143,7 +143,6 @@ img.w50 {
 }
 
 .jd_banner ul:nth-child(2) li.now {
-    margin-left: 0;
     background-color: red;
 }
 
