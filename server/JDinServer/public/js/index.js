@@ -3,6 +3,8 @@ window.onload = function () {
     searchOpacityChange();
     //轮播图切换
     lunBoChange();
+    //倒计时模块
+    countDown();
 };
 
 function searchOpacityChange() {
@@ -107,4 +109,43 @@ function lunBoChange() {
         //开启自动轮播
         timer = window.setInterval(intervalFun, 1000);
     });
+}
+
+function countDown() {
+    //倒计时时长2小时
+    var totalTime = 39600;
+    var hour = 0;
+    var min = 0;
+    var second = 0;
+    //开启倒计时定时器
+    var countDownFun = function () {
+        totalTime--;
+        var countTime = totalTime;
+        if (countTime / 3600 > 1) {
+            hour = Math.floor(countTime / 3600);
+            countTime = countTime - hour * 3600;
+        }
+        if (countTime / 60 > 1) {
+            min = Math.floor(countTime / 60);
+            countTime = countTime - min * 60;
+        }
+        second = countTime;
+        var timeViews = document.querySelectorAll('.time .times');
+        showTime(timeViews[0], timeViews[1], hour);
+        showTime(timeViews[2], timeViews[3], min);
+        showTime(timeViews[4], timeViews[5], second);
+    };
+
+    function showTime(dom1, dom2, time) {
+        if (time >= 10) {
+            dom1.innerHTML = Math.floor(time / 10).toString();
+            dom2.innerHTML = (time - Math.floor(time / 10) * 10).toString();
+        } else {
+            dom1.innerHTML = '0';
+            dom2.innerHTML = time.toString();
+        }
+    }
+
+    var countDownTimer = window.setInterval(countDownFun, 1000);
+
 }
