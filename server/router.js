@@ -16,7 +16,7 @@ router.get('/', function (req, res) {
         res.status(200).end(content);
     });
 });
-router.get('/toCategory',function (req,res) {
+router.get('/toCategory', function (req, res) {
     fs.readFile(path.join(__dirname, './JDinServer/category.html'), 'utf8', function (err, content) {
         if (err) {
             return res.status(500).end('服务器访问出错');

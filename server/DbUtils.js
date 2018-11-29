@@ -1,9 +1,9 @@
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-    host: 'localhost',
+    host: '47.96.76.172',
     user: 'root',
-    password: '123',
-    database: 'mybatis'
+    password: '4217aBc!',
+    database: 'test'
 });
 connection.connect();
 var Dbutils = {
