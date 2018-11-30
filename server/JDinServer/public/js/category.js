@@ -3,9 +3,11 @@ var distance = 0;
 var nowPosition = 0;
 var ul = document.querySelector('.jd_content .jd_content_left ul');
 var ulHeight = ul.offsetHeight;
-var jdContentHeight = document.querySelector('.jd_content').offsetHeight;
+var jdContentHeight = document.querySelector('.jd_layout').offsetHeight;
+var jdPaddingTop = parseInt(getComputedStyle(document.querySelector('.jd_layout'),false)['paddingTop']);
 ul.addEventListener('touchstart',function (e) {
     startY = e.touches[0].clientY;
+    console.log(jdPaddingTop)
 });
 
 ul.addEventListener('touchmove',function (e) {
@@ -26,8 +28,9 @@ ul.addEventListener('touchend',function (e) {
             nowPosition = 0;
             startTrinsion(ul,nowPosition);
         }else {
-            if (ulHeight - Math.abs(nowPosition) < jdContentHeight) {
-                nowPosition = jdContentHeight - ulHeight;
+            console.log((ulHeight - Math.abs(nowPosition))+'====='+(jdContentHeight - jdPaddingTop));
+            if (ulHeight - Math.abs(nowPosition) < jdContentHeight - jdPaddingTop) {
+                nowPosition = jdContentHeight - ulHeight-jdPaddingTop;
                 startTrinsion(ul,nowPosition);
             }
         }
